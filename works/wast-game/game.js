@@ -74,7 +74,7 @@ function draw_gameover_scene() {
 }
 
 document.body.onload = function() {
-    fetch("http://akitsu-sanae.github.io/work/wast-game/game.wasm", {mode: 'no-cors'})
+    fetch("./game.wasm")
         .then(res => res.arrayBuffer())
         .then(buffer =>  WebAssembly.instantiate(
             buffer, {
